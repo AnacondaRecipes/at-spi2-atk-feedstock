@@ -19,7 +19,9 @@ build:
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('at-spi2-atk', max_pin='x') }}
-
+  missing_dso_whitelist:  # [linux]
+    - $RPATH/libpthread.so.0  # [linux]
+    - $RPATH/libc.so.6  # [linux]
 requirements:
   build:
     - meson
@@ -30,7 +32,7 @@ requirements:
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('libxi-devel') }}  # [linux]
     - {{ cdt('libxfixes-devel') }}  # [linux]
-    - {{ cdt('libxtst-devel') }}  # [linux]
+    - {{ cdt('libxtst-devel') }}  # [linux and not ppc64le]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
   host:
     - at-spi2-core
@@ -68,3 +70,4 @@ extra:
     - ryanvolz
     - stuarteberg
     - tschoonj
+    - katietz
