@@ -47,7 +47,7 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/include/at-spi2-atk/2.0/atk-bridge.h  # [unix]
-    - test -f $PREFIX/lib/libatk-bridge-2.0${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/lib/libatk-bridge-2.0${SHLIB_EXT}     # [unix]
 
 about:
   home: http://www.gtk.org/
