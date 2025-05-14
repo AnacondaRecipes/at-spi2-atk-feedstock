@@ -14,7 +14,7 @@ source:
   sha256: 901323cee0eef05c01ec4dee06c701aeeca81a314a7d60216fa363005e27f4f0
 
 build:
-  number: 2
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('at-spi2-atk', max_pin='x') }}
