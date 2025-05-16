@@ -30,16 +30,12 @@ requirements:
     - pthread-stubs  # [linux]
     - {{ compiler('c') }}
   host:
+    # xorg-* packages brought through at-spi2-core.
     - at-spi2-core
     - atk
     - dbus
     - glib
     - gobject-introspection
-    - xorg-libx11
-    - xorg-libxi
-    - xorg-libxfixes
-    - xorg-libxtst
-    - xorg-xorgproto
   run:
     # this line can be removed when dbus gets exported properly
     - {{ pin_compatible('dbus') }}
