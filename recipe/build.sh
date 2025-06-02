@@ -5,7 +5,6 @@
 set -e
 
 meson setup builddir \
-    -D enable_docs=false \
     --prefix=$PREFIX \
     --libdir=$PREFIX/lib  \
     --wrap-mode=nofallback
